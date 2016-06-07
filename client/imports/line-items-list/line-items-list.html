@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <tr *ngFor="let item of lineItems"
+      class="{{ item.itemType }}">
+      <td class="amount">{{ item.amount }}</td>
+      <td class="date">{{ item.date }}</td>
+
+      <td class="category">{{ item.budgetCategory && item.budgetCategory.name ? item.budgetCategory.name : item.budgetCategory }}</td>
+      <td class="description">{{ item.description }}</td>
+      <td>
+        <button (click)="removeLineItem(item)">Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="total">
+    Total for this period: <strong class="{{ totalLineItems > 0 ? 'positive' : 'negative'}}">{{ totalLineItems }}</strong>
+  </div>
+</div>

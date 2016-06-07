@@ -1,0 +1,16 @@
+<div>
+  <header>
+    <a [routerLink]="['/Dashboard']">< Back</a>
+  </header>
+  <budget-items-form></budget-items-form>
+  <ul class="budget-items">
+    <budget-item-details
+      *ngFor="let item of budgetItems"
+      [item]="item"></budget-item-details>
+  </ul>
+
+  <div>
+    Total: {{ totalBudget }}
+  </div>
+</div>
+

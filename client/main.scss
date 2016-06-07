@@ -1,0 +1,86 @@
+$table-background: #FFFCF8;
+$income-color: #4CAF50;
+$expense-color: #FF5722;
+
+body {
+  max-width: 960px;
+  margin: 0 auto 2rem auto;
+  font-family: 'OpenSans', monospace;
+}
+
+.view-month-manager {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+
+  button {
+    margin: 0 .5rem;
+  }
+}
+
+.total {
+  margin: .5rem 0;
+
+  .positive {
+    color: $income-color;
+  }
+
+  .negative {
+    color: $expense-color;
+  }
+}
+
+.budget-items {
+  padding: 0;
+  list-style: none;
+}
+
+budget-item-details {
+  li {
+    margin: .2rem 0;
+  }
+  form {
+    display: inline-block;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 4px;
+  }
+
+  tr:nth-child(odd) {
+    td {
+      background-color: $table-background;
+    }
+  }
+
+  tr.income td.amount {
+    color: $income-color;
+  }
+
+  tr.expense td.amount {
+    color: $expense-color;
+  }
+
+  td.amount {
+    width: 25%;
+  }
+
+  td.date {
+    width: 10%;
+  }
+
+  td.category {
+    width: 20%;
+  }
+
+  td.description {
+    width: 30%;
+  }
+}
+

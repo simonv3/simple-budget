@@ -1,0 +1,17 @@
+<h1>Simple Budget</h1>
+
+<section>
+  <a [routerLink]="['/BudgetItemsList']">Set Your Budget</a>
+</section>
+
+<section class="expenses">
+  <header>
+    <h1>Money Movement</h1>
+  </header>
+  <line-items-form></line-items-form>
+  <view-month-manager [filterInput]="filterInput"></view-month-manager>
+  <line-items-list
+    [filterType]="filterType"
+    [filterInput]="filterInput">
+  </line-items-list>
+</section>

@@ -1,0 +1,25 @@
+<form [ngFormModel]="lineItemsForm" #f="ngForm" (submit)="addLineItem(f.value)">
+
+  <label>Amount</label>
+  <input type="number" ngControl="amount">
+
+  <label>Category</label>
+  <select ngControl="budgetCategory">
+    <option *ngFor="let item of budgetItems" [value]="item._id">
+      {{item.name}}
+    </option>
+  </select>
+
+  <label>Description</label>
+  <input type="text" ngControl="description">
+
+  <label>Date</label>
+  <input type="date" ngControl="date">
+
+  <label>Type</label>
+  <select ngControl="itemType">
+    <option value="expense">Expense</option>
+    <option value="income">Income</option>
+  </select>
+  <button>Add</button>
+</form>
